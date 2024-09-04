@@ -11,6 +11,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.os_manager import ChromeType
 
 from prompts import SYSTEM_PROMPT
 from openai import OpenAI
@@ -268,7 +271,9 @@ def main():
         setup_logger(task_dir)
         logging.info(f'########## TASK{task["id"]} ##########')
 
-        driver_task = webdriver.Chrome(options=options)
+        driver_task = webdriver.Chrome(service=Service(
+                ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
+            ),options=options)
         # About window size, 765 tokens
         # You can resize to height = 512 by yourself (255 tokens, Maybe bad performance)
         driver_task.set_window_size(1024, 768)  # larger height may contain more web information
