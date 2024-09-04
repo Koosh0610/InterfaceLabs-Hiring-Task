@@ -45,6 +45,8 @@ def driver_config(args):
 
     if args.force_device_scale:
         options.add_argument("--force-device-scale-factor=1")
+    options.add_argument("--disable-gpu")
+    options.add_argument("headless")
     options.add_argument("--headless=new")
     options.add_argument(
             "--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
