@@ -18,7 +18,7 @@ The project is an implementation of the research paper [WebVoyager](https://arxi
 
 The task to be executed is stored in a [json file](https://github.com/Koosh0610/InterfaceLabs-Hiring-Task/data/task.jsonl).
 
-Modification to the task: The user input is modified a bit from my side. raw input didn't allow the LLM to execute the actions properly. It has been shown that respond to [emotions](https://arxiv.org/abs/2307.11760) and hence the LLM is told that the user is sick and not in a state to fill out the form.
+Modification to the task: The user input is modified a bit from my side. Raw input didn't allow the LLM to execute the actions properly. It has been shown that respond to [emotions](https://arxiv.org/abs/2307.11760) and hence the LLM is told that the user is sick and not in a state to fill out the form.
 
 Limitations:
 
