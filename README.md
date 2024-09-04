@@ -6,7 +6,7 @@ An AI Agent to fill out a Google Form comes under the interessting application o
 
 Following are the steps to run it locally on your laptop or PC:
 
-```git clone https://github.com/Koosh0610/InterfaceLabs-Hiring-Task/```\
+```git clone https://github.com/Koosh0610/InterfaceLabs-Hiring-Task.git```\
 ```cd InterfaceLabs-Hiring-Task```\
 ```pip install -r requirements.text```\
 ```py -m streamlit run streamlit_app.py```
