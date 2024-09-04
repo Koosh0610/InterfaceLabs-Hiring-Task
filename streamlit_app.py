@@ -484,7 +484,7 @@ def main():
                     fail_obs = ""
                 time.sleep(2)
         
-        print_message(messages, task_dir)
+            print_message(messages, task_dir)
         driver_task.quit()
         logging.info(f'Total cost: {accumulate_prompt_token / 1000 * 0.01 + accumulate_completion_token / 1000 * 0.03}')
 
