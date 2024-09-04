@@ -11,12 +11,13 @@ Following are the steps to run it locally on your laptop or PC:
 ```pip install -r requirements.text```\
 ```py -m streamlit run streamlit_app.py```
 
-The project relies on OpenAI API. Please enter your key in the sidebar on the streamlit page. The streamlit page will open in your default browser.
 I use ```gpt-4-turbo``` as the LLM. ```gpt-4o-mini``` is unsuccesful at the task and ```gpt-4o``` is costlier that ```gpt-4-turbo```
 
 The project is an implementation of the research paper [WebVoyager](https://arxiv.org/abs/2401.13919).
 
 The task to be executed is stored in a [json file](https://github.com/Koosh0610/InterfaceLabs-Hiring-Task/data/task.jsonl).
+
+Upon launch of the page, please enter your key in the sidebar on the streamlit page. The streamlit page will open in your default browser. The page will dislplay the state of the agent in the form of webpage screenshot. You can track the progress of the agent this way. Or you can open the ```results``` directory to see the process logs.
 
 Modification to the task: The user input is modified a bit from my side. Raw input didn't allow the LLM to execute the actions properly. It has been shown that respond to [emotions](https://arxiv.org/abs/2307.11760) and hence the LLM is told that the user is sick and not in a state to fill out the form.
 
