@@ -19,6 +19,8 @@ The task to be executed is stored in a [json file](https://github.com/Koosh0610/
 
 Upon launch of the page, please enter your key in the sidebar on the streamlit page. The streamlit page will open in your default browser. The page will dislplay the state of the agent in the form of webpage screenshot. You can track the progress of the agent this way. Or you can open the ```results``` directory to see the process logs.
 
+Special thanks to Aditya for providing a temporary api key for project purposes.
+
 Action process:
 We open a headless browser via Selenium. A javascript script is executed to annotate the page and form bounding boxes for the vLLM to recognise. Then a screenshot is taken which is passed to vLLM along with the prompt. A ReAct agent prompt is used to generate "Thought" and "Action" and based on "Observation". LLM decides to take an action based on the user instructions. The reasoning done by LLM are the thoughts and how to interact to with the page forms part of the action. It can form six actions as of now:
 1. Click
@@ -33,9 +35,11 @@ Modification to the task: The user input is modified a bit from my side. Raw inp
 
 Limitations:
 
-1. Write now the url to be navigated is hard coded into the task.
+1. Write now the url to be navigated is hard coded into the task. It sometimes cannot navigate to the correct website.
 2. I couldn't figure out all the errors while using selenium with a streamlit page and hence input cannot be given on a GUI. So, it is mentioned seperately in a JSON file.
 
 Future Work:
 1. Give additional helper functions to simulate a human's use of the web
-2. There are certain instances where pop-ups restrict the bot to work. Despite instructions to close the pop-ups, they fail at this task. Additional prompting methods/functions to solve this bug.
+2. There are certain instances where pop-ups restrict the bot to work. Despite instructions to close the pop-ups, they fail at this task. Additional prompting methods/functions to solve this bug. It cannot interact with re-captcha elements or close advertosements. A fine-tuned model is required for this purpose
+3. Switch from ```gpt-4-turbo``` to open-source models like ```llava-1.5b``` to save cost and improve performance.
+4. Very slow due to OpenAI rate limits.
