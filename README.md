@@ -20,7 +20,7 @@ The task to be executed is stored in a [json file](https://github.com/Koosh0610/
 Upon launch of the page, please enter your key in the sidebar on the streamlit page. The streamlit page will open in your default browser. The page will dislplay the state of the agent in the form of webpage screenshot. You can track the progress of the agent this way. Or you can open the ```results``` directory to see the process logs.
 
 Action process:
-We open a headless browser via Selenium. A javascript script is executed to annotate the page and form bounding boxes for the vLLM to recognise. Then a screenshot is take which is passed to vLLM along with the prompt. A ReAct agent prompt is used to instruct to generate "Thought" and "Action" and based on "Observation". LLM decides to take an action based on the user instructions. The reasoning done by LLM are the thoughts and how to interact to with the page forms part of the action. It can form six actions as of now:
+We open a headless browser via Selenium. A javascript script is executed to annotate the page and form bounding boxes for the vLLM to recognise. Then a screenshot is taken which is passed to vLLM along with the prompt. A ReAct agent prompt is used to generate "Thought" and "Action" and based on "Observation". LLM decides to take an action based on the user instructions. The reasoning done by LLM are the thoughts and how to interact to with the page forms part of the action. It can form six actions as of now:
 1. Click
 2. Type
 3. Scroll
