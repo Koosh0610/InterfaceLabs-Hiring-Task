@@ -490,7 +490,7 @@ def main():
 
 
 if __name__ == '__main__':
-    st.title("Inteface Labs Hiring Task")
+    st.title("Interface Labs Hiring Task")
     st.header("AI Agent to fill out a Google Form")
 
     with st.sidebar:
