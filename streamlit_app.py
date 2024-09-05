@@ -257,7 +257,7 @@ def main():
     os.makedirs(result_dir, exist_ok=True)
     # Load tasks
     tasks = []
-    with open(r'data/tasks_test.jsonl', 'r', encoding='utf-8') as f:
+    with open(r'data/task.jsonl', 'r', encoding='utf-8') as f:
         for line in f:
             tasks.append(json.loads(line))
     for task_id in range(len(tasks)):
