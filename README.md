@@ -33,6 +33,8 @@ We open a headless browser via Selenium. A javascript script is executed to anno
 
 Modification to the task: The user input is modified a bit from my side. Raw input didn't allow the LLM to execute the actions properly. It has been shown that respond to [emotions](https://arxiv.org/abs/2307.11760) and hence the LLM is told that the user is sick and not in a state to fill out the form.
 
+To change the agent's task with respect to goole form details please edit the ```ques``` field in [task file](https://github.com/Koosh0610/InterfaceLabs-Hiring-Task/blob/main/data/task.jsonl).
+
 Limitations:
 
 1. Write now the url to be navigated is hard coded into the task. It sometimes cannot navigate to the correct website.
