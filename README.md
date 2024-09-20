@@ -1,4 +1,4 @@
-INTERFACE LABS HIRING TASK
+
 
 Task: An AI Agent to fill out a Google form based on natural language input.
 
